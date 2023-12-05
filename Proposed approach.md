@@ -1,10 +1,10 @@
+( If you have an idea, you definitely should comment into this file )
 We should take into account these:
 
 ![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/26b34942-976f-4684-8c0d-f9b6ab8add10)
 
 ![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/538f51bf-cfa7-406b-86ae-e956c09c5e58)
 
-My suggestion is :
 
 # Difficulty of the Problem Interest:
 
