@@ -35,7 +35,7 @@ Predicting stock prices represents a significant challenge in the field of finan
 
 **HYBRID MODELS (Optional):** Hybrid models that combine traditional time-series models with machine learning or deep learning models can sometimes offer improved performance by leveraging the strengths of each approach.
 
-*( We implemented Linear Regression, LSTM, we should add two more, Random Forest and SVM, then we should compare them and go for the best one ).*
+*( We should implement Linear Regression, LSTM, Random Forest and SVM,(you can add your prefered algorithm) then we should compare them and go for the best one, or combine them).*
 
 **QUALITY OF DATA PREPROCESSING :** The quality of preprocessing steps such as dealing with missing values, outliers, and scaling also greatly influences the model's performance.
 
