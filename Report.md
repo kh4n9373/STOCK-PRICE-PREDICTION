@@ -30,25 +30,25 @@ Our interest in machine learning, data analytics, and the stock market has led u
 
 As a collaborative group, we recognize the dynamic nature of the financial industry, which is rapidly evolving and actively seeking innovative ways to leverage machine learning for the effective management of risk and financial losses. Our project aims to contribute to this evolution by exploring the intersection of financial analytics and artificial intelligence.
 
-## Data Preparation
+## Data Preparation <a name="paragraph1"></a>
 
 We fetch data from Yahoo Finance, an excellent source for reliable stock market movements and prices. This ensures we have up-to-date and accurate data on stock prices and trading volumes. We then leverage the pandas library for efficient data manipulation and preprocessing, allowing us to handle missing values, normalize data, and create meaningful features. The processed dataset is exported to CSV format, maintaining compatibility with various machine learning frameworks. 
 
-## Machine Learning Models
+## Machine Learning Models <a name="paragraph2"></a>
 
-### LSTM
-
-#### How it Works
-
-#### Why We Use It
-
-### Linear Regression
+### LSTM <a name="subparagraph1"></a>
 
 #### How it Works
 
 #### Why We Use It
 
-### Decision Tree
+### Linear Regression <a name="subparagraph2"></a>
+
+#### How it Works
+
+#### Why We Use It
+
+### Decision Tree <a name="subparagraph3"></a>
 
 #### How it Works
 
@@ -58,7 +58,7 @@ The Decision Tree algorithm employed in our stock market prediction project oper
 
 Decision Trees offer an intuitive and straightforward approach to decision-making, providing a clear and logical path. Their simplicity allows for easy interpretation and understanding of the decision-making process. Although Decision Trees can occasionally become overly detailed, leading to predictions influenced by irrelevant data, they still hold immense value. In fact, Decision Trees serve as a fundamental element in our strategy, acting as the building blocks for more sophisticated ensemble methods such as Random Forests. 
 
-### Random Forest
+### Random Forest <a name="subparagraph4"></a>
 
 #### How it Works
 The Random Forest algorithm enhances decision-making by constructing a "forest" of Decision Trees. Each tree is trained on a random subset of historical stock data, introducing diversity in the learning process. When it is time to predict the stock price for the next day, each tree in the forest provides its prediction, and the final decision is made through a voting process. This collective approach helps mitigate individual tree biases and typically yields more accurate and reliable predictions.
@@ -66,13 +66,13 @@ The Random Forest algorithm enhances decision-making by constructing a "forest" 
 #### Why We Use Buy, Sell, or Hold Predictions:
 The reason we utilize the "Buy," "Sell," or "Hold" prediction approach in our Random Forest implementation is to determine whether it is advisable to buy, sell, or hold the stock based on the ensemble decision of the forest. This three-class prediction approach adds practicality to our strategy, enabling us to anticipate not only upward or downward movements but also suggest holding the stock when there is no clear indication of a significant change. This aligns with real-world trading decisions and provides actionable insights for users.
 
-## Code Components
+## Code Components <a name="paragraph3"></a>
 
-## Results
+## Results <a name="paragraph4"></a>
 
-## Difficulties
+## Difficulties <a name="paragraph5"></a>
 
-## Libraries
+## Libraries <a name="paragraph6"></a>
 
 1. Pandas (The Pandas development team, publisher Zendoo, version latest)
 2. Numpy (Charles R. Harris, K. Jarrod Millman, Stéfan J. van der Walt, Ralf Gommers, Pauli Virtanen, David Cournapeau, Eric Wieser, Julian Taylor, Sebastian Berg, Nathaniel J. Smith, Robert Kern, Matti Picus, Stephan Hoyer, Marten H. van Kerkwijk, Matthew Brett, Allan Haldane, Jaime Fernández del Río, Mark Wiebe, Pearu Peterson, Pierre Gérard-Marchant, Kevin Sheppard, Tyler Reddy, Warren Weckesser, Hameer Abbasi, Christoph Gohlke & Travis E. Oliphant, published 09.x.2020)
