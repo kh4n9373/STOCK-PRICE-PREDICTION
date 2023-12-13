@@ -21,7 +21,7 @@ Ha Vu Ngoc
     4. [Random Forest](#subparagraph4)
 4. [Code Components](#paragraph3)
 5. [Results](#paragraph4)
-6. [Difficultie](#paragraph5)
+6. [Difficulties](#paragraph5)
 7. [Libraries](#paragraph6)
 
 ## Introduction
@@ -37,12 +37,12 @@ The adoption of Artificial Neural Network (ANN) techniques and decision tree alg
 ## Data Preparation <a name="paragraph1"></a>
 
 We fetch data from Yahoo Finance, an excellent source for reliable stock market movements and prices. Specifically, we used the stock market data from Microsoft, Vinfast, Apple and Google. For each trading day of the stock, a record of each of the following is posted:
--Open = the price when the market opened in the morning.
--Close = the price when the market closed in the afternoon.
--High = the highest price during that trading day.
--Low = the lowest price during that trading day.
--Volume = number of shares of the stock traded that day.
--Adj Close (Adjusted Close) = a price adjusted to account various corporate actions, such as dividends, stock splits, and other events that might affect the stock's price. 
+- Open = the price when the market opened in the morning.
+- Close = the price when the market closed in the afternoon.
+- High = the highest price during that trading day.
+- Low = the lowest price during that trading day.
+- Volume = number of shares of the stock traded that day.
+- Adj Close (Adjusted Close) = a price adjusted to account various corporate actions, such as dividends, stock splits, and other events that might affect the stock's price. 
 
 Using yFinance ensures that we have up-to-date and accurate data on stock prices and trading volumes. We then leverage the pandas library for efficient data manipulation and preprocessing, allowing us to handle missing values, normalize data, and create meaningful features. The processed dataset is exported to CSV format, maintaining compatibility with various machine learning frameworks. 
 
@@ -54,9 +54,9 @@ Within the field of machine learning (ML), our report on Stock Price Prediction 
 Within the supervised learning framework, two fundamental types of tasks are regression and classification. Regression involves predicting a continuous outcome, such as stock prices, making it directly applicable to stock market prediction. On the other hand, classification deals with categorizing data into discrete classes such as "Buy", "Sell" and "Hold", a methodology that we applied within the Random Forest Algorithm. This classification approach faciliates the decision-making process by providing actionable insights into potential investment strategies based on the historical behavior of the stock.
 
 The learning process in machine learning has three main elements that are essential; these are the target function, training set and testing set. 
--The training set is used to construct model learning by revealing the patterns and relationship it may contain. 
--The target function explains how the inputs correlate to the outputs. 
--The testing evaluates the model and consists of unseen data for gauging its generalization ability.
+- The training set is used to construct model learning by revealing the patterns and relationship it may contain. 
+- The target function explains how the inputs correlate to the outputs. 
+- The testing evaluates the model and consists of unseen data for gauging its generalization ability.
 
 
 ### LSTM <a name="subparagraph1"></a>
@@ -75,7 +75,7 @@ The learning process in machine learning has three main elements that are essent
 
 #### How it Works
 
-The Decision Tree algorithm employed in our stock market prediction project operates as a sophisticated decision-making process. It effectively analyzes historical stock data by posing a series of inquiries regarding market conditions, such as the comparison between the closing price and the previous day's closing price, or the presence of an upward trend in the stock. By answering these inquiries, the algorithm ultimately generates a prediction for the movement of tomorrow's stock price.
+The Decision Tree algorithm employed in our stock market prediction project operates as a decision-making process. It effectively analyzes historical stock data by posing a series of inquiries regarding market conditions, such as the comparison between the closing price and the previous day's closing price, or the presence of an upward trend in the stock. By answering these inquiries, the algorithm ultimately generates a prediction for the movement of tomorrow's stock price.
 
 #### Why We Use It
 
