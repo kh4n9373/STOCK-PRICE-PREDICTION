@@ -28,13 +28,36 @@ Ha Vu Ngoc
 
 Our interest in machine learning, data analytics, and the stock market has led us to choose financial machine learning as the topic for our final project in the course Introduction to AI. Despite our limited prior experience with machine learning, we are fully committed to putting forth our best effort and meticulously documenting the entire process of building the models.
 
-As a collaborative group, we recognize the dynamic nature of the financial industry, which is rapidly evolving and actively seeking innovative ways to leverage machine learning for the effective management of risk and financial losses. Our project aims to contribute to this evolution by exploring the intersection of financial analytics and artificial intelligence.
+As a collaborative group, we recognize the dynamic nature of the financial industry, which is rapidly evolving and actively seeking innovative ways to leverage machine learning for the effective management of risk and financial losses. Several research efforts have also been carried out to predict the market in order to make profit using different techniques. Our project aims to contribute to this evolution by exploring the intersection of financial analytics and artificial intelligence. 
+
+The adoption of Artificial Neural Network (ANN) techniques and decision tree algorithms has gained significant traction in the business landscape, thanks to its adeptness in modeling relationships among non-linear variables. These sophisticated data mining methodologies allow deeper analysis of large set of data, ecpecially those characterized by rapid fluctuations within short time spans. Consequently, ANN stands out as a promising tool for forecasting stock market dynamics.
+
+
 
 ## Data Preparation <a name="paragraph1"></a>
 
-We fetch data from Yahoo Finance, an excellent source for reliable stock market movements and prices. This ensures we have up-to-date and accurate data on stock prices and trading volumes. We then leverage the pandas library for efficient data manipulation and preprocessing, allowing us to handle missing values, normalize data, and create meaningful features. The processed dataset is exported to CSV format, maintaining compatibility with various machine learning frameworks. 
+We fetch data from Yahoo Finance, an excellent source for reliable stock market movements and prices. Specifically, we used the stock market data from Microsoft, Vinfast, Apple and Google. For each trading day of the stock, a record of each of the following is posted:
+-Open = the price when the market opened in the morning.
+-Close = the price when the market closed in the afternoon.
+-High = the highest price during that trading day.
+-Low = the lowest price during that trading day.
+-Volume = number of shares of the stock traded that day.
+-Adj Close (Adjusted Close) = a price adjusted to account various corporate actions, such as dividends, stock splits, and other events that might affect the stock's price. 
+
+Using yFinance ensures that we have up-to-date and accurate data on stock prices and trading volumes. We then leverage the pandas library for efficient data manipulation and preprocessing, allowing us to handle missing values, normalize data, and create meaningful features. The processed dataset is exported to CSV format, maintaining compatibility with various machine learning frameworks. 
+
 
 ## Machine Learning Models <a name="paragraph2"></a>
+
+Within the field of machine learning (ML), our report on Stock Price Prediction explores the utilization of advanced models to anticipate trends in the stock market. Machine learning, a subset of artificial intelligence, encompasses a range of methodologies, with supervised and unsupervised learning being particularly significant approaches. In supervised learning, a model is trained using a dataset that is labeled, allowing the algorithm to understand the relationship between input features and corresponding output labels. In the context of predicting stock market behavior, supervised learning is applicable as historical stock data can be used as a labeled dataset, enabling the model to learn and generate predictions based on known outcomes.
+
+Within the supervised learning framework, two fundamental types of tasks are regression and classification. Regression involves predicting a continuous outcome, such as stock prices, making it directly applicable to stock market prediction. On the other hand, classification deals with categorizing data into discrete classes such as "Buy", "Sell" and "Hold", a methodology that we applied within the Random Forest Algorithm. This classification approach faciliates the decision-making process by providing actionable insights into potential investment strategies based on the historical behavior of the stock.
+
+The learning process in machine learning has three main elements that are essential; these are the target function, training set and testing set. 
+-The training set is used to construct model learning by revealing the patterns and relationship it may contain. 
+-The target function explains how the inputs correlate to the outputs. 
+-The testing evaluates the model and consists of unseen data for gauging its generalization ability.
+
 
 ### LSTM <a name="subparagraph1"></a>
 
