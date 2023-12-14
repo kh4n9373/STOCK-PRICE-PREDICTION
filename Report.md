@@ -46,8 +46,11 @@ We fetch data from Yahoo Finance, an excellent source for reliable stock market 
 
 #### How it Works
 
+Linear regression works by modeling the relationship between a dependent variable (e.g., stock price) and one or more independent variables through a linear equation. The model aims to find the best-fitting line that minimizes the difference between predicted and actual values in historical data. The equation takes the form Y = b0 + b1∗X + ϵ, where Y is the dependent variable, X is the independent variable, b0 is the y-intercept, b1 is the slope, and ϵ represents the error term. Training the model involves determining the coefficients b0 and B1 to create a predictive formula, enabling the estimation of future stock prices based on new input values. 
+
 #### Why We Use It
 
+Linear regression is employed in stock price prediction for several reasons. First, it offers interpretability, allowing analysts to understand and quantify the impact of independent variables on stock prices through the coefficients in the linear equation. Second, it provides a quick and straightforward implementation, making it a practical choice for initial analyses and as a baseline model for comparison. While linear regression has its limitations, such as assuming a linear relationship between variables, it remains valuable for its simplicity, ease of interpretation, and as a starting point for more complex modeling approaches in the domain of stock price prediction. 
 ### Decision Tree <a name="subparagraph3"></a>
 
 #### How it Works
