@@ -40,7 +40,11 @@ We fetch data from Yahoo Finance, an excellent source for reliable stock market 
 
 #### How it Works
 
+Long Short Term Memory (LSTM) - is a model that increases the memory of Recurrent Neural Networks (RNN). The core idea behind LSTM is the use of memory cells. These cells can store information for long durations, and their state can be selectively updated or cleared. To control the flow of information into and out of the memory cell, the algorithm uses three distinct gates: Input gate (manages the amount of new information that enters the memory cell), Forget gate (controls the removal of information from the memory cell) and Output gate (determines the information to be output based on the current cell state). About cell state, it is the internal memory of the LSTM which runs along the entire sequence and is modified by the gates at each time step. Ultimately, LSTM is trained using backpropagation through time (BPTT), similar to other RNNs with the aim to minimize the difference between the predicted output and the actual output.
+
 #### Why We Use It
+
+In comparison with traditional RNNS, LSTM is a modified version to cope with the vanishing gradient problem, which is caused by the repeated use of the same parameters in RNN blocks, at each step. To do so, LSTM leverages gating mechanisms to control the flow of information and gradients. This helps prevent the vanishing gradient problem and allows the network to learn and retain information over longer sequences. As a result, LSTM is more effective at predicting time-series patterns, especially stock prices.
 
 ### Linear Regression <a name="subparagraph2"></a>
 
