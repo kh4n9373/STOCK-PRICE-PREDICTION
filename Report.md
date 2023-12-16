@@ -19,6 +19,7 @@ Ha Vu Ngoc
     2. [Linear Regression](#subparagraph2)
     3. [Decision Tree](#subparagraph3)
     4. [Random Forest](#subparagraph4)
+    5. [Support Vector Machine](#subparagraph5)
 4. [Code Components](#paragraph3)
 5. [Results](#paragraph4)
 6. [Difficultie](#paragraph5)
@@ -72,6 +73,16 @@ The Random Forest algorithm enhances decision-making by constructing a "forest" 
 
 #### Why We Use Buy, Sell, or Hold Predictions:
 The reason we utilize the "Buy," "Sell," or "Hold" prediction approach in our Random Forest implementation is to determine whether it is advisable to buy, sell, or hold the stock based on the ensemble decision of the forest. This three-class prediction approach adds practicality to our strategy, enabling us to anticipate not only upward or downward movements but also suggest holding the stock when there is no clear indication of a significant change. This aligns with real-world trading decisions and provides actionable insights for users.
+
+### Support Vector Machine <a name="subparagraph5"></a>
+
+#### How it Works
+
+The goal of Support Vector Machine Regression(SVR) is to find a function that predicts the continuous output variable (target) based on input features while minimizing the prediction error. SVR does this by identifying a hyperplane that best represents the distribution of data points, considering a certain margin of error (epsilon). Unlike classification SVM, which aims to maximize the margin between classes, SVR aims to fit as many instances as possible within a specified margin while limiting violations (data points outside the margin) to within a certain tolerance.
+
+#### Why We Use It
+
+The reasons why SVR can be considered for stock price prediction are stock price movements often exhibit nonlinear patterns, and SVR is capable of capturing nonlinear relationships between input features and target variables. SVR is flexible and can handle various types of data distributions. It can adapt to different market conditions and capture trends or patterns that may not be captured by linear models. This model is also less sensitive to outliers compared to some other regression techniques. In the stock market, where unexpected events can lead to outliers in the data, this robustness can be beneficial. In addition, SVR includes a regularization term in its cost function, helping prevent overfitting. 
 
 ## Code Components <a name="paragraph3"></a>
 
