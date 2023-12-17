@@ -11,6 +11,6 @@ For the regression the output can be the mean, while for the classification the 
 ### Calculate the distance between points
 Several method can be used to calcukate the distance between points in the dataset, for example:
 
-![Alt text](Euclid Distance.png)
+![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/blob/main/Script%20for%20making%20slides/Euclid%20Distance.png)
 
-![Alt text](Manhattan Distance.png)
+![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/blob/main/Script%20for%20making%20slides/Manhattan%20Distance.png)
