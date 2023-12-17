@@ -116,8 +116,6 @@ The limitation of our models to historical stock prices implies that the learnin
 
 Expanding the model's learning horizon by incorporating real-time data, news sentiment analysis, and market events can potentially bridge this gap. A dynamic model that adapts to changing market conditions and incorporates timely information could offer a more accurate representation of the stock's future trajectory.
 
-In conclusion, navigating the complexities of stock price prediction demands a holistic approach that transcends the limitations posed by data constraints, model evaluation intricacies, and historical learning patterns. By addressing these challenges head-on and incorporating innovative solutions, we can enhance the robustness and accuracy of our machine learning models, offering more reliable insights for investors in the unpredictable landscape of the stock market.
-
 ## Libraries <a name="paragraph6"></a>
 
 1. Pandas (The Pandas development team, publisher Zendoo, version latest)
