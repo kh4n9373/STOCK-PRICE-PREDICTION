@@ -90,6 +90,34 @@ The reasons why SVR can be considered for stock price prediction are stock price
 
 ## Difficulties <a name="paragraph5"></a>
 
+Predicting stock prices through machine learning poses several challenges, hindering the seamless development and deployment of accurate models. These hurdles encompass the scarcity of detailed data, difficulties in assessing model performance metrics, and the inherent limitation of models relying solely on historical stock prices.
+
+### Insufficient Data Granularity
+
+The success of any stock price prediction model hinges on the availability and richness of data. However, we grapple with a lack of detailed information, obtaining only the fundamental stock parameters such as Open Price, High, Low, Close Price, and Volume. To enhance the predictive capabilities of our model, we require additional contextual data, including market conditions, comprehensive financial reports of companies, and insights into governmental policies that may influence the stock market. Moreover, vital numeric indicators such as Return on Investment (ROI), Price-to-Earnings (P/E) ratios, and liquidity metrics are conspicuously absent, impeding a holistic understanding of the stock's potential.
+
+In addressing this challenge, an extensive effort should be directed towards acquiring diverse datasets, encompassing a broader spectrum of financial indicators and external factors. Integration of macroeconomic indicators and sentiment analysis from financial news could significantly augment the predictive power of the model.
+
+### Precision and Recall Evaluation Complexities
+
+The evaluation of machine learning models, particularly Support Vector Machines (SVM), encounters intricacies in assessing precision and recall. While the model may accurately predict the general direction of stock prices, deviations in actual stock prices present challenges in calculating precision and recall. This discrepancy arises from the model's potential accuracy in predicting trends but with significant variations in the actual stock price values.
+
+To overcome this challenge, a nuanced approach to evaluation metrics is imperative. In addition to precision and recall, considering metrics that account for the magnitude of price variations, such as Mean Absolute Error (MAE) or Root Mean Squared Error (RMSE), can offer a more comprehensive assessment of the model's performance.
+
+### Model Performance Discrepancies
+
+Despite implementing various stock price prediction models, our observations reveal that the Support Vector Machine model consistently outperforms others in terms of correctness when compared to real-world data. However, the reliability of this model introduces a paradox—its proficiency in predicting trends but potential deviations in predicting the actual stock prices.
+
+A more detailed exploration into model performance discrepancies is warranted. This could involve a deep dive into the specific characteristics of the SVM model that contribute to its strengths and weaknesses, as well as an exploration of ensemble models or hybrid approaches that amalgamate the strengths of multiple models
+
+### Historical Price Pattern Learning
+
+The limitation of our models to historical stock prices implies that the learning process is confined to discerning patterns in these historical data. While this has proven effective in capturing trends, it might fall short in predicting stock behavior in response to novel events or abrupt market shifts.
+
+Expanding the model's learning horizon by incorporating real-time data, news sentiment analysis, and market events can potentially bridge this gap. A dynamic model that adapts to changing market conditions and incorporates timely information could offer a more accurate representation of the stock's future trajectory.
+
+In conclusion, navigating the complexities of stock price prediction demands a holistic approach that transcends the limitations posed by data constraints, model evaluation intricacies, and historical learning patterns. By addressing these challenges head-on and incorporating innovative solutions, we can enhance the robustness and accuracy of our machine learning models, offering more reliable insights for investors in the unpredictable landscape of the stock market.
+
 ## Libraries <a name="paragraph6"></a>
 
 1. Pandas (The Pandas development team, publisher Zendoo, version latest)
