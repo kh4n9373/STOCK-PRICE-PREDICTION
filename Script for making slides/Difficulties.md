@@ -18,6 +18,4 @@ The models just calculate base on historical prices of stocks. Therefore, we can
 
 ### Conclusion
 
-Navigating the complexities of stock price prediction demands a holistic approach that transcends the limitations posed by data constraints, model evaluation intricacies, and historical learning patterns
-
 By addressing these challenges head-on and incorporating innovative solutions, we can enhance the robustness and accuracy of our machine learning models, offering more reliable insights for investors in the unpredictable landscape of the stock market
