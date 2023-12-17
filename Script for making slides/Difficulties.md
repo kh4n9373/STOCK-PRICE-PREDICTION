@@ -4,17 +4,25 @@ Lack of details data, just know about stocks' outline information (Open Price, H
 
 More over, some numeric data which are significantly important for investors to making decisions for buying/selling stocks, are not provided such as ROI, P/E, liquidity, etc.
 
+![Alt text](difficulties.png)
+
 ### Precision and Recall Evaluation Complexities
 
 Hard to calculate the precision and recall of the Support Vector Machine model because the predictions can be correct about the directions of the stock prices, but have a significant deviation in the price of stocks, compared to the real data.
+
+![Alt text](difficulties1.png)
 
 ### Model Performance Discrepancies
 
 Although we have implemented the stock price prediction model in various ways, but as we conclude, just the Support Vector Machine model can perform predictions with the highest correctness, compared to the real world data.
 
+![Alt text](difficulties2.png)
+
 ### Historical Price Pattern Learning
 
 The models just calculate base on historical prices of stocks. Therefore, we can understand that the model just learning about "pattern" of the stock prices.
+
+![Alt text](difficulties3.png)
 
 ### Conclusion
 
