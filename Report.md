@@ -22,7 +22,7 @@ Ha Vu Ngoc
     5. [Support Vector Machine](#subparagraph5)
 4. [Code Components](#paragraph3)
 5. [Results](#paragraph4)
-6. [Difficultie](#paragraph5)
+6. [Difficulties](#paragraph5)
 7. [Libraries](#paragraph6)
 
 ## Introduction
