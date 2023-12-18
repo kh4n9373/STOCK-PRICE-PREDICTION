@@ -106,9 +106,9 @@ To overcome this challenge, a nuanced approach to evaluation metrics is imperati
 
 ### Model Performance Discrepancies
 
-Despite implementing various stock price prediction models, our observations reveal that the Support Vector Machine model consistently outperforms others in terms of correctness when compared to real-world data. However, the reliability of this model introduces a paradox—its proficiency in predicting trends but potential deviations in predicting the actual stock prices.
+The disparities in performance among the algorithms, including Linear Regression, Decision Tree, KNN, and LSTM, present notable challenges in predicting stock prices. Linear Regression struggles with non-linear relationships, Decision Tree is susceptible to noise and overfitting, and KNN may fail to accurately capture global trends. LSTM, while adept at handling temporal dependencies, is not immune to sudden fluctuations. 
 
-A more detailed exploration into model performance discrepancies is warranted. This could involve a deep dive into the specific characteristics of the SVM model that contribute to its strengths and weaknesses, as well as an exploration of ensemble models or hybrid approaches that amalgamate the strengths of multiple models
+These challenges stem from difficulties in modeling complex relationships, sensitivity to noise, and the inherent unpredictability of stock market data. The choice of features and the dynamic nature of stock prices further compound the complexity, requiring a nuanced approach to address the intricacies of the financial markets effectively.
 
 ### Historical Price Pattern Learning
 
