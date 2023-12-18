@@ -14,7 +14,7 @@ Hard to calculate the precision and recall of the Support Vector Machine model b
 
 ### Model Performance Discrepancies
 
-
+Differences in algorithm performance (Linear Regression, Decision Tree, KNN, LSTM) present challenges in predicting stock prices due to difficulties in modeling non-linear relationships and the unpredictable nature of financial data. 
 
 ### Historical Price Pattern Learning
 
