@@ -8,7 +8,7 @@ More over, some numeric data which are significantly important for investors to 
 
 ### Precision and Recall Evaluation Complexities
 
-Hard to calculate the precision and recall of the Support Vector Machine model because the predictions can be correct about the directions of the stock prices, but have a significant deviation in the price of stocks, compared to the real data.
+Hard to calculate the precision and recall of models because the predictions can be correct about the directions of the stock prices, but have a significant deviation in the price of stocks, compared to the real data.
 
 ![Alt text](difficulties1.png)
 
