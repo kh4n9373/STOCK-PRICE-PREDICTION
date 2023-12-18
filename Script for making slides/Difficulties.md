@@ -14,9 +14,7 @@ Hard to calculate the precision and recall of the Support Vector Machine model b
 
 ### Model Performance Discrepancies
 
-Although we have implemented the stock price prediction model in various ways, but as we conclude, just the Support Vector Machine model can perform predictions with the highest correctness, compared to the real world data.
 
-![Alt text](difficulties2.png)
 
 ### Historical Price Pattern Learning
 
