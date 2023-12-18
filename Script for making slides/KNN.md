@@ -67,7 +67,7 @@ Here we use Microsoft dataset.
 
 -Robust to noisy data, no need to filter outliers
 
-2.Disadvantage:
+2.Disadvantages:
 
 -Due to KNN is a non-parameter model, it must be trained with the entire data, so the implementation takes a long time.
 
