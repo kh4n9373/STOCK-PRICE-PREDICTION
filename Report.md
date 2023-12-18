@@ -100,7 +100,7 @@ In addressing this challenge, an extensive effort should be directed towards acq
 
 ### Precision and Recall Evaluation Complexities
 
-The evaluation of machine learning models, particularly Support Vector Machines (SVM), encounters intricacies in assessing precision and recall. While the model may accurately predict the general direction of stock prices, deviations in actual stock prices present challenges in calculating precision and recall. This discrepancy arises from the model's potential accuracy in predicting trends but with significant variations in the actual stock price values.
+The evaluation of machine learning models, encounters intricacies in assessing precision and recall. While the model may accurately predict the general direction of stock prices, deviations in actual stock prices present challenges in calculating precision and recall. This discrepancy arises from the model's potential accuracy in predicting trends but with significant variations in the actual stock price values.
 
 To overcome this challenge, a nuanced approach to evaluation metrics is imperative. In addition to precision and recall, considering metrics that account for the magnitude of price variations, such as Mean Absolute Error (MAE) or Root Mean Squared Error (RMSE), can offer a more comprehensive assessment of the model's performance.
 
