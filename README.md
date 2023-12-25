@@ -4,7 +4,7 @@
 
 ![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/44d8d8e1-bbb2-42b3-93c4-96d80a86dc52)
 
-
+# Group 1
 # Precision Forecasting : A Comprehensive Analysis and Prediction for Stock Closing Price (AI PROJECT)
 Guided by Prof. Khoat Than Quang
 
