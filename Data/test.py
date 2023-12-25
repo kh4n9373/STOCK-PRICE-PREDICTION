@@ -2,7 +2,7 @@ from crawling_data import fetch_stock_data, save_to_csv, fetch_and_save_data
 import datetime
 # Use the functions
 symbol = "AMZN"
-period = "5y"
+period = "10y"
 stock_data = fetch_stock_data(symbol, period)
 save_to_csv(stock_data, symbol)
 
