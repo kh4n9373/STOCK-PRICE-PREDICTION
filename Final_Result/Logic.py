@@ -8,18 +8,18 @@ import time
 
 def loading_animation():
     chars = ['.', '..', '...', '....']
-    for _ in range(10):  # Adjust the number of iterations based on your preference
+    for _ in range(10):  
         for char in chars:
             sys.stdout.write(f'\rFetching{char}')
             sys.stdout.flush()
-            time.sleep(0.3)  # Adjust the sleep duration for the desired speed
+            time.sleep(0.3) 
 
 print('**Initializing Stock Price Analysis Program**')
 print('------------------------------------------')
 
 while True:
     name = input("Enter the business code (e.g., AAPL, GOOG, TSLA): ")
-    if name.isalpha():  # Ensure code consists of letters only
+    if name.isalpha(): 
         loading_animation()
         stock_data = fetch_stock_data(name, '10y')
         print('\n')
