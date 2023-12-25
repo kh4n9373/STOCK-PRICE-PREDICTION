@@ -5,8 +5,7 @@ import matplotlib.pyplot as plt
 from pylab import rcParams #customizing plot display options
 import numpy as np
 import seaborn as sns
-import os
-plt.style.use('fivethirtyeight')
+from sklearn.linear_model import LinearRegression
 
 # Loading the dataset
 stock = pd.read_csv('/home/khangpt/STOCK-PRICE-PREDICTION/Data/MSFT_historical_data_yfinance.csv',index_col=0)
@@ -17,7 +16,7 @@ df_Stock.set_index('Date',inplace=True)
 
 # Creating training, validation, and test sets
 # 88% for training, 10% for validation, 2% for testing
-def create_train_test_test(df_Stock):
+def create_train_test_set(df_Stock):
     features = df_Stock.drop(['Close'],axis=1)
     target = df_Stock['Close']
     
@@ -25,49 +24,33 @@ def create_train_test_test(df_Stock):
     # print('Historical Stock Data length is - ', str(data_len))
     
     #create a chronological split for train and testing
-    train_split = int(data_len * 0.88)
+    train_split = int(data_len * 0.8)
     # print('Training Set length - ', str(train_split))
-
-    val_split = train_split + int(data_len * 0.1)
-    # print('Validation Set length - ', str(int(data_len * 0.1)))
-    
-    # print('Test Set length - ', str(int(data_len * 0.02)))
+    # print('Test Set length - ', str(int(data_len * 0.2)))
     
     #Splitting features and target into train, validation and test examples
-    X_train, X_val, X_test = features[:train_split], features[train_split:val_split], features[val_split:]
-    Y_train, Y_val, Y_test = target[:train_split], target[train_split:val_split], target[val_split:]
+    X_train,X_test = features[:train_split], features[train_split+1:]
+    Y_train,Y_test = target[:train_split], target[train_split+1:]
     
     #Print shape of samples
     # print(X_train.shape, X_val.shape, X_test.shape)
     # print(Y_train.shape, Y_val.shape, Y_test.shape)
     
-    return X_train, X_val, X_test, Y_train, Y_val, Y_test
+    return X_train, X_test, Y_train, Y_test
 
+def implement(df_Stock,your_data):
+    X_train, X_test, Y_train, y_test = create_train_test_set(df_Stock)
+    lr = LinearRegression()
+    lr.fit(X_train, Y_train)
 
-X_train, X_val, X_test, Y_train, Y_val, Y_test = create_train_test_test(df_Stock)
+    y_pred = lr.predict(X_test)
+    y_test, y_pred = np.array(y_test), np.array(y_pred)
+    accuracy = np.mean(np.abs((y_pred - y_pred) / y_test)) * 100
 
-from sklearn.linear_model import LinearRegression
-lr = LinearRegression()
-lr.fit(X_train, Y_train)
+    print(f'The accuracy score: {accuracy:.2%}')
 
-
-def get_mape(y_true, y_pred):
-    """
-    Compute mean absolute percentage error (MAPE)
-    """
-    y_true, y_pred = np.array(y_true), np.array(y_pred)
-    return np.mean(np.abs((y_true-y_pred)/y_true))*100
-
-Y_train_pred = lr.predict(X_train)
-Y_val_pred = lr.predict(X_val)
-Y_test_pred = lr.predict(X_test)
-
-
-df_pred = pd.DataFrame(Y_test.values, columns=['Actual'], index=Y_test.index)
-df_pred['Predicted'] = Y_test_pred
-df_pred = df_pred.reset_index()
-df_pred['Date'] = pd.to_datetime(df_pred['Date'], format='%Y-%m-%d')
-df_pred
+    return lr.predict(your_data)
+    
 
 
 
