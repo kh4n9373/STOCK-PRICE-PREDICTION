@@ -49,7 +49,11 @@ data['Low'] = [low]
 data['Volume'] = [volume]
 
 read_the_data(stock_data)
+time.sleep(3)
 final = implement(stock_data, data)
 
 print('\n')
-print('Predicted close price :', final, ' ,Good luck :)')
+print('Predicted close price :', final[0])
+print('\n----------------------Good luck :)------------------------')
+
+sys.exit()

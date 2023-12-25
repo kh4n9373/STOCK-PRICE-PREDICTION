@@ -6,6 +6,7 @@ from pylab import rcParams #customizing plot display options
 import numpy as np
 import seaborn as sns
 from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error
 
 # Loading the dataset
 stock = pd.read_csv('/home/khangpt/STOCK-PRICE-PREDICTION/Data/MSFT_historical_data_yfinance.csv',index_col=0)
@@ -44,10 +45,9 @@ def implement(df_Stock,your_data):
     lr.fit(X_train, Y_train)
 
     y_pred = lr.predict(X_test)
-    y_test, y_pred = np.array(y_test), np.array(y_pred)
-    accuracy = np.mean(np.abs((y_pred - y_pred) / y_test)) * 100
+    accuracy = 1 - np.mean(np.abs((y_pred - y_test) / y_test))
 
-    print(f'The accuracy score: {accuracy:.2%}')
+    print(f'\nThe accuracy score: {accuracy:.2%}')
 
     return lr.predict(your_data)
     
