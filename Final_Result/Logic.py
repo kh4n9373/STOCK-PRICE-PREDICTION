@@ -1,8 +1,7 @@
 import pandas as pd
 from read_the_data import read_the_data
 from crawling_data import fetch_stock_data
-from LinearRegression import implement
-import datetime
+from LinReg import Lr_implement
 import sys
 import time
 
@@ -50,7 +49,7 @@ data['Volume'] = [volume]
 
 read_the_data(stock_data)
 time.sleep(3)
-final = implement(stock_data, data)
+final = Lr_implement(stock_data, data)
 
 print('\n')
 print('Predicted close price :', final[0])
