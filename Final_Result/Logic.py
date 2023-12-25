@@ -2,6 +2,8 @@ import pandas as pd
 from read_the_data import read_the_data
 from crawling_data import fetch_stock_data
 from LinReg import Lr_implement
+from KNN import KNN_implement
+from Tree import Tree_implement
 import sys
 import time
 
@@ -48,8 +50,18 @@ data['Low'] = [low]
 data['Volume'] = [volume]
 
 read_the_data(stock_data)
+
+model = input('\nChoose Your Models (LR), (TR), (KN): ').upper()
 time.sleep(3)
-final = Lr_implement(stock_data, data)
+print('\n')
+if model == 'LR':
+    final = Lr_implement(stock_data, data)
+elif model == 'TR':
+    final = Tree_implement(stock_data, data)
+elif model == 'KN':
+    final = KNN_implement(stock_data, data)
+else:
+    print("Invalid input. Please choose LR, TR, or KN.")
 
 print('\n')
 print('Predicted close price :', final[0])
