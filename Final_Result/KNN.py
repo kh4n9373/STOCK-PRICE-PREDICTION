@@ -23,6 +23,6 @@ def KNN_implement(df_Stock, your_data):
     
     your_data_scaled = scaler.transform(your_data)
     res = knn_model.predict(your_data_scaled)
-    return results_kfold.mean() * 100,res
+    return results_kfold.mean(),res
 
 
