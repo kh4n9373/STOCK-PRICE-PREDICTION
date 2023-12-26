@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Analysis</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://media4.giphy.com/media/JtBZm3Getg3dqxK0zP/giphy.gif?cid=ecf05e47xqgif92ejnd49s7cn6aconj129inhgwtseysshlc&ep=v1_gifs_related&rid=giphy.gif&ct=g');
+            background-size: contain; /* or background-size: cover; */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input, select {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            text-align: center; /* added text-align property */
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z" /></svg>');
+            background-position: right 8px center;
+            background-repeat: no-repeat;
+        }
+
+
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.5s ease; /* added transition property */
+        }
+
+        .loading {
+            background-color: purple !important;
+            color: white !important;
+            transition: background-color 1.5s ease; /* added transition property */
+        }
+
+        .loading:after {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 2px solid white;
+            border-radius: 50%;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            margin-left: 8px;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var form = document.querySelector('form');
+            form.addEventListener('submit', function() {
+                var submitButton = form.querySelector('input[type="submit"]');
+                submitButton.value = 'Please wait...';
+                submitButton.classList.add('loading');
+            });
+        });
+    </script>
+</head>
+<body>
+    <form action="/predict" method="post">
+        <h1>Stock Price Analysis</h1>
+        <label for="name">Business Code:</label>
+        <input type="text" name="name" required>
+        <label for="opun">Today's Open Price:</label>
+        <input type="text" name="opun" required>
+        <label for="high">Today's High Price:</label>
+        <input type="text" name="high" required>
+        <label for="low">Today's Low Price:</label>
+        <input type="text" name="low" required>
+        <label for="volume">Today's Trading Volume:</label>
+        <input type="text" name="volume" required>
+        <label for="model">Choose Your Model:</label>
+        <select name="model" id="model">
+            <option value="LR">Linear Regression (LR)</option>
+            <option value="TR">Decision Tree (TR)</option>
+            <option value="KN">K-Nearest Neighbors (KN)</option>
+        </select>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

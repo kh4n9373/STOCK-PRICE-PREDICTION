@@ -18,10 +18,9 @@ def Tree_implement(df_Stock, your_data):
     
     y_pred = tree.predict(X_test)
     accuracy = mean_squared_error(Y_test, y_pred)
-    print('\nPerformance:', accuracy)
 
     your_data = scaler.transform(your_data)
     result = tree.predict(your_data)
-    return result
+    return accuracy,result
 
 

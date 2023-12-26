@@ -65,6 +65,6 @@ else:
 
 print('\n')
 print('Predicted close price :', final[0])
-print('\n----------------------Good luck :)------------------------')
+print('\n----------------------------------------------')
 
 sys.exit()

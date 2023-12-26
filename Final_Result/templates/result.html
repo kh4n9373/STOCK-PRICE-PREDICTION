@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3NydnpwcGkxcjFsZXp4czBvNXZnZ2UzOHQ1MjlmdDVicmF4YzFvNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bMycGOQLESDCEnLNUz/giphy.gif');
+            background-size: cover; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .result-container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 50px;
+            padding: 100px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        .significant-value {
+            font-size: 1.5em; /* Adjust the size as needed */
+            background: linear-gradient(to right, #ff0000, #a200ff); /* Adjust the colors */
+            -webkit-background-clip: text;
+            background-clip: text; /* Standard property */
+            color: transparent;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        hr {
+            border: 1px solid #ddd;
+            margin: 15px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Prediction Result</h1>
+        <p><strong>Performance:</strong><br><strong class="significant-value">{{ accu }}</strong></p>
+        <p><strong>Predicted Close Price:</strong><br><strong class="significant-value">{{ final }}</strong></p>
+        <p><a href="/">Make other Prediction</a></p>
+    </div>
+</body>
+</html>

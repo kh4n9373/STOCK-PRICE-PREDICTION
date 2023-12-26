@@ -8,10 +8,8 @@ def Lr_implement(df_Stock,your_data):
     lr.fit(X_train, Y_train)
     y_pred = lr.predict(X_test)
     accuracy = 1 - np.mean(np.abs((y_pred - Y_test) / Y_test))
-    print('\nPerformance:',accuracy)
-
     result = lr.predict(your_data)
-    return result
+    return accuracy, result
 
 
 
