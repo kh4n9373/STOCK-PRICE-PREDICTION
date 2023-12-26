@@ -20,8 +20,9 @@ This repository was created from November 25 2023 to serve the capstone project 
 # How to install and use the Stock Price Predict app ?
 
 1. First you have to download GIT to your PC. If you are using Window, checkout for the GIT official website. If you are using MACOS, open the terminal and install git using command line 'brew install git', else please use 'sudo apt-get update && sudo apt-get install git' for ubuntu system.
-2. Open up your terminal/cmd, clone this repository to your PC,
+2. Open up your terminal/cmd, git init and clone this repository to your PC,
 ~~~
+git init
 git clone https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION.git
 ~~~
 3. Install the requirements.txt so that the app can run properly (on desired libraries):
@@ -34,9 +35,9 @@ cd Stock-Price-Prediction/
 ~~~
 5. Then run the app by using this command line :
 ~~~
-python main.py # num
+python main.py #num
 ~~~
-num is the value of the port number you prefer range from 0000 to 9999, you should based on this value to run the app on the website. If you dont fill in the 'num',th executor will set the num=5000 by default.
+#num is the value of the port number you prefer ranging from 0000 to 9999, you should based on this value to run the app on the website. If you dont fill in the 'num',the executor will set the num=5000 by default.
 
 The example of running the app successfully:
 
@@ -49,7 +50,7 @@ The example of running the app successfully:
 localhost: #num
 ~~~
 
-The value num is the value you chose for the port else it would be 5000, in the above example, that value is 1234, which means we have to type:
+The value num is the value you chose for the port. If you havent filled it yet, so it should be 5000, in the above example, that value is 1234, which means we have to type:
 
 ![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/4c1908c5-c362-4b72-b9f4-53704e5538f8)
 
