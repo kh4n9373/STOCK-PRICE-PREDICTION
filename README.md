@@ -50,7 +50,7 @@ The example of running the app successfully:
 localhost: #num
 ~~~
 
-The value num is the value you chose for the port else it would be 5000, in the above example, that value is 1234, which means we have to type:
+The value num is the value you chose for the port. If you havent filled it yet, so it should be 5000, in the above example, that value is 1234, which means we have to type:
 
 ![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/4c1908c5-c362-4b72-b9f4-53704e5538f8)
 
