@@ -34,9 +34,9 @@ cd Stock-Price-Prediction/
 ~~~
 5. Then run the app by using this command line :
 ~~~
-python main.py # num
+python main.py #num
 ~~~
-num is the value of the port number you prefer range from 0000 to 9999, you should based on this value to run the app on the website. If you dont fill in the 'num',th executor will set the num=5000 by default.
+#num is the value of the port number you prefer ranging from 0000 to 9999, you should based on this value to run the app on the website. If you dont fill in the 'num',the executor will set the num=5000 by default.
 
 The example of running the app successfully:
 
