@@ -29,11 +29,14 @@ pdr.fred.FredReader.api_key = api_key
 #     return selected_data
 
 def fetch_stock_data(symbol, period):
-    stock = yf.Ticker(symbol)
-    historical_data = stock.history(period=period)
-    selected_data = historical_data[['Open', 'High', 'Low', 'Close', 'Volume']].copy()
-    selected_data['Date'] = historical_data.index.date
-    return selected_data
+    try:
+        stock = yf.Ticker(symbol)
+        historical_data = stock.history(period=period)
+        selected_data = historical_data[['Open', 'High', 'Low', 'Close', 'Volume']].copy()
+        selected_data['Date'] = historical_data.index.date
+        return selected_data
+    except Exception as e:
+        raise ValueError("THERE IS NO SUCH BUSINESS CODE !!") from e
 
 
 # In[4]:

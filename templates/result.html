@@ -82,7 +82,13 @@
         {% else %}
             <h1>{{ predict }}</h1>
         {% endif %}
-        <p><strong>Performance:</strong><br><strong class="significant-value">{{ accu }}</strong></p>
+        {% if accu < 50 %}
+            <p><strong>Performance:</strong><br><strong class="significant-value" style="color: red;">{{ accu }}</strong></p>
+        {% elif 50 <= accu < 80 %}
+            <p><strong>Performance:</strong><br><strong class="significant-value" style="color: rgb(226, 147, 0);">{{ accu }}</strong></p>
+        {% else %}
+            <p><strong>Performance:</strong><br><strong class="significant-value" style="color: green;">{{ accu }}</strong></p>
+        {% endif %}        
         <p><strong>Predicted Close Price:</strong><br><strong class="significant-value">{{ final }}</strong></p>
         <p><a href="/">Make other Prediction</a></p>
     </div>
