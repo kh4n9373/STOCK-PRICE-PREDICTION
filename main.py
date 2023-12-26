@@ -21,15 +21,7 @@ def predict():
     high = float(request.form['high'])
     low = float(request.form['low'])
     volume = float(request.form['volume'])
-    # def loading_animation():
-    #     chars = ['.', '..', '...', '....']
-    #     for _ in range(10):  
-    #         for char in chars:
-    #             sys.stdout.write(f'\rFetching{char}')
-    #             sys.stdout.flush()
-    #             time.sleep(0.3) 
 
-    # loading_animation()
     stock_data = fetch_stock_data(name, '10y')
 
     data = pd.DataFrame({'Open': [opun], 'High': [high], 'Low': [low], 'Volume': [volume]})
