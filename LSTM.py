@@ -54,14 +54,45 @@ def LSTM_implement(df_Stock, your_data):
     explained_variance = r2_score(y_true, y_pred)
     test_explain_variation = explained_variance * 100
 
-    your_data_array = your_data.values.reshape(1, -1)
-    your_data_scaled = scaler.transform(your_data_array)
-    x_new = []
-    for i in range(60, len(new_data_scaled[0])):
-        x_new.append(your_data_scaled[0, i-60:i])
+    c = your_data['Open'] + your_data['High'] + your_data['Low']
+    f = float('inf')
+    closest_index = -1
 
-    x_new = np.array(x_new)
-    x_new = np.reshape(x_new, (x_new.shape[0], x_new.shape[1], 1))
-    your_data_prediction = model.predict(your_data_reshaped)
-    your_data_prediction = scaler.inverse_transform(your_data_prediction)
-    return test_explain_variation, your_data_prediction[0, 0]
+    for i, (m, n, p, _, _) in enumerate(df_Stock.values):
+        b = float(abs(m + n + p - c))
+        if b <= f:
+            f = b
+            closest_index = i
+    df = pd.concat([df_Stock.iloc[:closest_index + 1], your_data, df_Stock.iloc[closest_index + 1:]]).reset_index(drop=True)
+
+    data = df.filter(['Close'])
+    dataset = data.values
+    room = int(len(dataset) * 0.05)
+
+    scaler = MinMaxScaler(feature_range=(0, 1))
+    scaled_data = scaler.fit_transform(dataset)
+
+    if closest_index - room > 60:
+        test_data = scaled_data[closest_index - room: closest_index, :]
+        # create the data sets x_test and y_test
+        x_test = []
+        y_test = dataset[closest_index - room + 60: closest_index, :]
+        for i in range(60, len(test_data)):
+            x_test.append(test_data[i - 60:i, 0])
+        # convert the data to a numpy array
+        x_test = np.array(x_test)
+    else:
+        test_data = scaled_data[0: closest_index, :]
+        # create the data sets x_test and y_test
+        x_test = []
+        y_test = dataset[int(closest_index / 2): closest_index, :]
+        for i in range(int(closest_index / 2), len(test_data)):
+            x_test.append(test_data[i - int(closest_index / 2):i, 0])
+        # convert the data to a numpy array
+        x_test = np.array(x_test)
+        x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
+
+        predictions = model.predict(x_test)
+        predictions = scaler.inverse_transform(predictions)
+        your_data_prediction = predictions[-1][0]
+    return test_explain_variation, your_data_prediction
