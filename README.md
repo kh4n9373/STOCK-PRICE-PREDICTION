@@ -28,13 +28,13 @@ This repository was created from November 25 2023 to serve the capstone project 
 git init
 git clone https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION.git
 ~~~
-3. Install the requirements.txt so that the app can run properly (on prefered libraries):
-~~~
-pip install -q -r requirements.txt
-~~~
-4. Change the directory to the Stock-Price-Prediction you've just cloned
+3. Change the directory to the Stock-Price-Prediction you've just cloned
 ~~~
 cd Stock-Price-Prediction/
+~~~
+4. Install the requirements.txt so that the app can run properly (on prefered libraries):
+~~~
+pip install -q -r requirements.txt
 ~~~
 5. Then run the app by using this command line :
 ~~~
