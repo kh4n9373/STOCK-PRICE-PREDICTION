@@ -19,13 +19,16 @@ This repository was created from November 25 2023 to serve the capstone project 
 
 # How to install and use the Stock Price Predict app ?
 
+0. You should have installed python language on your PC.
+
 1. First you have to download GIT to your PC. If you are using Window, checkout for the GIT official website. If you are using MACOS, open the terminal and install git using command line 'brew install git', else please use 'sudo apt-get update && sudo apt-get install git' for ubuntu system.
+   
 2. Open up your terminal/cmd, git init and clone this repository to your PC,
 ~~~
 git init
 git clone https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION.git
 ~~~
-3. Install the requirements.txt so that the app can run properly (on desired libraries):
+3. Install the requirements.txt so that the app can run properly (on prefered libraries):
 ~~~
 pip install -q -r requirements.txt
 ~~~
