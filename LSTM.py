@@ -54,6 +54,9 @@ def LSTM_implement(df_Stock, your_data):
     explained_variance = r2_score(y_true, y_pred)
     test_explain_variation = explained_variance * 100
 
-    your_data_prediction = model.predict(your_data)
+    your_data_array = your_data.values
+    your_data_scaled = scaler.transform(your_data_array)
+    your_data_reshaped = np.reshape(your_data_scaled, (1, 60, 1))
+    your_data_prediction = model.predict(your_data_reshaped)
     your_data_prediction = scaler.inverse_transform(your_data_prediction)
     return test_explain_variation, your_data_prediction
