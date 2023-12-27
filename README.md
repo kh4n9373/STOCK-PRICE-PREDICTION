@@ -44,7 +44,7 @@ python main.py #num
 
 The example of running the app successfully:
 
-![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/67f3acbe-ec89-4988-aca7-b4271321ac35)
+![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/699744f5-7792-4dc8-b245-bccb0d40a61e)
 
 
 6. Go up to your search engine (chrome, safari, bing,...) type this to the search bar :
