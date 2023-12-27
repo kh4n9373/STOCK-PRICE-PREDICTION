@@ -28,13 +28,13 @@ This repository was created from November 25 2023 to serve the capstone project 
 git init
 git clone https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION.git
 ~~~
-3. Install the requirements.txt so that the app can run properly (on prefered libraries):
-~~~
-pip install -q -r requirements.txt
-~~~
-4. Change the directory to the Stock-Price-Prediction you've just cloned
+3. Change the directory to the Stock-Price-Prediction you've just cloned
 ~~~
 cd Stock-Price-Prediction/
+~~~
+4. Install the requirements.txt so that the app can run properly (on prefered libraries):
+~~~
+pip install -q -r requirements.txt
 ~~~
 5. Then run the app by using this command line :
 ~~~
@@ -44,7 +44,7 @@ python main.py #num
 
 The example of running the app successfully:
 
-![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/67f3acbe-ec89-4988-aca7-b4271321ac35)
+![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/699744f5-7792-4dc8-b245-bccb0d40a61e)
 
 
 6. Go up to your search engine (chrome, safari, bing,...) type this to the search bar :
@@ -60,11 +60,12 @@ The value num is the value you chose for the port. If you havent filled it yet, 
 
 Then, the application should be shown up :
 
-![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/734a22ee-a3d0-475c-b7bb-6ce257b9e2d9)
+![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/671dd719-f15c-4ddf-a7e6-418783559cb0)
 
 7. Just fill the necessary attribute of the stock price, click 'Predict' and you will get the answer, with the performance of the algorithm on train set
 
-![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/c2923d5b-bf4e-4a88-9dad-fee0afed1e27)
+![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/b1defc02-5e8c-45a4-bab4-80d97e2a169b)
+
 
 
 ## ABOUT THE MARKDOWN FILES:
