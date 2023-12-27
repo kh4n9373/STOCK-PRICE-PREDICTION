@@ -2,14 +2,17 @@
 import pandas as pd
 import numpy as np
 from sklearn import model_selection
-from split_train_test import create_train_test_test
+# from split_train_test import create_train_test_test
 from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn import model_selection
 
 
 def KNN_implement(df_Stock, your_data):
-    X_train, X_test, Y_train, Y_test = create_train_test_test(df_Stock)
+    X = df_Stock.drop(columns=['Close'])
+    Y = df_Stock['Close']
+    X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size=0.1,random_state=42)
 
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
