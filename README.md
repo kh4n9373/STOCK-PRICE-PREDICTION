@@ -60,11 +60,12 @@ The value num is the value you chose for the port. If you havent filled it yet, 
 
 Then, the application should be shown up :
 
-![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/734a22ee-a3d0-475c-b7bb-6ce257b9e2d9)
+![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/671dd719-f15c-4ddf-a7e6-418783559cb0)
 
 7. Just fill the necessary attribute of the stock price, click 'Predict' and you will get the answer, with the performance of the algorithm on train set
 
-![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/c2923d5b-bf4e-4a88-9dad-fee0afed1e27)
+![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/b1defc02-5e8c-45a4-bab4-80d97e2a169b)
+
 
 
 ## ABOUT THE MARKDOWN FILES:
