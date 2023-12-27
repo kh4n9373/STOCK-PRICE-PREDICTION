@@ -54,9 +54,14 @@ def LSTM_implement(df_Stock, your_data):
     explained_variance = r2_score(y_true, y_pred)
     test_explain_variation = explained_variance * 100
 
-    your_data_array = your_data.values
+    your_data_array = your_data.values.reshape(1, -1)
     your_data_scaled = scaler.transform(your_data_array)
-    your_data_reshaped = np.reshape(your_data_scaled, (1, 60, 1))
+    x_new = []
+    for i in range(60, len(new_data_scaled[0])):
+        x_new.append(your_data_scaled[0, i-60:i])
+
+    x_new = np.array(x_new)
+    x_new = np.reshape(x_new, (x_new.shape[0], x_new.shape[1], 1))
     your_data_prediction = model.predict(your_data_reshaped)
     your_data_prediction = scaler.inverse_transform(your_data_prediction)
-    return test_explain_variation, your_data_prediction
+    return test_explain_variation, your_data_prediction[0, 0]
