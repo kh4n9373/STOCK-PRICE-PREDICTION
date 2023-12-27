@@ -46,7 +46,7 @@
             color: #555;
         }
 
-        input,select {
+        input, select {
             width: calc(100% - 12px);
             padding: 8px;
             margin-bottom: 10px;
@@ -73,10 +73,6 @@
             width: 100%;
             height:100px;
             font-size: 40px;
-
-        }
-        .algorithm-block {
-            display: none;
         }
 
         .loading {
@@ -98,7 +94,8 @@
             margin-left: 8px;
             animation: spin 0.8s linear infinite;
         }
-        .hov:hover{
+
+        .hov:hover {
             transition: transform 0.05s ease; 
             background-color: red;
             color:#fff;
@@ -118,7 +115,7 @@
 </head>
 <body>
     <form action="/predict" method="post">
-        <h1>Đầu tư mạo hiểm, Ích nước, Lợi nhà</h1>
+        <h1>Stock Price Prediction Model</h1>
         <label for="name">Business Code</label>
         <input type="text" name="name" required>
         <label for="opun">Today's Open Price</label>
@@ -127,7 +124,7 @@
         <input type="text" name="high" required>
         <label for="low">Low Price So Far Today</label>
         <input type="text" name="low" required>
-        <label for="volume">Trading VolumeSo Far Today</label>
+        <label for="volume">Trading Volume So Far Today</label>
         <input type="text" name="volume" required>
         <label for="model">Choose Your Model</label>
         <select name="model" id="model">

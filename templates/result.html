@@ -18,6 +18,8 @@
         }
 
         .result-container {
+            display: none;
+            animation: emerge 1s ease-out;
             text-align: center;
             background-color:#fff ;
             border-radius: 50px;
@@ -47,10 +49,10 @@
         
 
         .significant-value {
-            font-size: 1.5em; /* Adjust the size as needed */
-            background: linear-gradient(to right, #ff0000, #a200ff); /* Adjust the colors */
+            font-size: 1.5em;
+            background: linear-gradient(to right, #ff0000, #a200ff); 
             -webkit-background-clip: text;
-            background-clip: text; /* Standard property */
+            background-clip: text; 
             color: transparent;
             display: inline-block;
             transition: color 0.3s ease;
@@ -71,7 +73,24 @@
         a:hover {
             color: #e74c3c;
         }
+        @keyframes emerge {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var resultContainer = document.querySelector('.result-container');
+            resultContainer.style.display = 'block';
+        });
+    </script>
 </head>
 <body>
     <div class="result-container">

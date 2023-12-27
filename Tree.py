@@ -1,9 +1,8 @@
-import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
-from sklearn.metrics import r2_score
+from sklearn.metrics import mean_absolute_percentage_error
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import GridSearchCV
-from split_train_test import create_train_test_test  
+from split_train_test import create_train_test_test
 
 def Tree_implement(df_Stock, your_data):
     X_train, X_test, Y_train, Y_test = create_train_test_test(df_Stock)
@@ -11,6 +10,7 @@ def Tree_implement(df_Stock, your_data):
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
+    your_data = scaler.transform(your_data)
 
     param_grid = {
         'max_depth': [3, 5, 7],
@@ -26,8 +26,8 @@ def Tree_implement(df_Stock, your_data):
     tree.fit(X_train, Y_train)
 
     y_pred = tree.predict(X_test)
-    accuracy = r2_score(Y_test, y_pred)
-    your_data = scaler.transform(your_data)
+    accuracy = 100 - mean_absolute_percentage_error(Y_test, y_pred) * 100
 
     result_tree = tree.predict(your_data)
-    return accuracy , result_tree
+
+    return accuracy/100, result_tree
