@@ -117,5 +117,7 @@ Then, the application should be shown up :
   We (each member individually) have incorporated our key points into the slides. During the presentation, we will rely on those script lines to articulate our thoughts. Script synthesis is aimed at making the slide creation (handled by one member) more cohesive, instead of having multiple people working on slides simultaneously.
 
 
-  
+## The architecture of stock price prediction app 
+![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/7afc522f-1ef6-4c33-87b9-9198baf0d656)
+
 
