@@ -120,4 +120,26 @@ Then, the application should be shown up :
 ## The architecture of stock price prediction app 
 ![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/7afc522f-1ef6-4c33-87b9-9198baf0d656)
 
+   Following an in-depth exploration and implementation of diverse algorithms for the stock price prediction task, our next step involves conducting experiments with a sample dataset. This dataset encompasses the various attributes associated with a company's stock on a specific day
 
+   The primary goal is to evaluate the performance of each model in predicting the closing price of the company's stock at the conclusion of the same day. This empirical approach allows us to assess the efficacy of the developed models in a real-world context, providing valuable insights into their predictive capabilities for short-term stock price movements.
+
+**Data Acquisition**: The program starts by fetching historical stock price data from Yahoo Finance (YFINANCE) using the provided business code and date range. This data likely includes attributes like open price, high price, low price, volume, and date.
+
+**Data Processing**: The retrieved data is then stored in a DataFrame, which is a tabular structure often used in data analysis. This organizes the data into rows and columns, making it easier to manipulate and analyze.Specific attributes relevant to price prediction are chosen from the DataFrame. These might include open price, high price, low price, and volume.
+
+**Model Selection**:You can choose between three different machine learning models for prediction: Linear Regression (LR), Decision Tree (TR), and K-Nearest Neighbors (KN). Each model has its own strengths and weaknesses, and the choice may depend on the specific characteristics of the chosen stock and historical data. Based on your selection, the app uses the chosen model to analyze the selected data attributes and build a predictive model.
+
+**Prediction**:The model then uses the learned patterns from the historical data to predict th**e closing price of the stock for the current day (or a future date, depending on the app's functionality).
+
+**Output**: The predicted closing price is displayed on the interface, potentially alongside other relevant information like confidence scores or historical price charts.
+
+**Overall Workflow:** The app essentially follows a common machine learning workflow for price prediction:
+
+- Gather historical data relevant to the	prediction task.
+- Prepare and clean the data for analysis.
+- Choose and train a machine learning model	based on the selected data.
+- Use the trained model to predict future	outcomes (stock price in this case).
+- Display the prediction and potentially	additional insights.
+
+Limitations and Considerations: It's important to keep in mind that stock price prediction is a complex task, and no model can guarantee perfect accuracy. Various factors beyond the scope of the provided data, like news events, economic conditions, and investor sentiment, can also influence stock prices. Therefore, it's crucial to treat predictions as estimations and use them alongside other analysis and considerations before making investment decisions.
