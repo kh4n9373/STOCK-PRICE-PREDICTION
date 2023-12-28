@@ -5,7 +5,6 @@ from sklearn.preprocessing import MinMaxScaler
 from keras.models import Sequential
 from keras.layers import Dense, LSTM
 from sklearn.metrics import r2_score
-from crawling_data import fetch_stock_data
 
 
 def LSTM_implement(df_Stock, your_data):
@@ -97,7 +96,3 @@ def LSTM_implement(df_Stock, your_data):
         predictions = scaler.inverse_transform(predictions)
         your_data_prediction = predictions[-1][0]
     return test_explain_variation, your_data_prediction
-
-stock_data = fetch_stock_data('AAPL', '10y')
-your_data = pd.DataFrame({'Open': [30], 'High': [40], 'Low': [20], 'Volume': [567890]})
-print(LSTM_implement(stock_data, your_data))
