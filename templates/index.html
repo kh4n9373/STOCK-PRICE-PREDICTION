@@ -101,6 +101,41 @@
             color:#fff;
             border-color: red;
         }
+        .option-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            }
+        .option-block {
+            display: inline-block;
+            width: 30%; 
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #4caf50;
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            opacity: 1; /* Initial opacity */
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .option-block:hover {
+            background-color: #4caf50;
+            color:#fff;
+        }
+        .option-block:not(.selected):hover {
+            opacity: 1; 
+            transition: opacity 0.05s ease-in-out;
+        }
+        .option-block.selected {
+            background-color: #4caf50;
+            color: #fff;
+            opacity:1;
+        }
+        .option-block:not(.selected) {
+            opacity: 0.3; 
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -109,6 +144,23 @@
                 var submitButton = form.querySelector('input[type="submit"]');
                 submitButton.value = 'Please wait...';
                 submitButton.classList.add('loading');
+            });
+            const optionBlocks = document.querySelectorAll('.option-block');
+            const hiddenModelInput = document.getElementById('model');
+
+            hiddenModelInput.value = "LR"; 
+
+            optionBlocks.forEach(block => {
+                block.addEventListener('click', () => {
+                    // Remove selected class from all blocks
+                    optionBlocks.forEach(block => block.classList.remove('selected'));
+
+                    // Add selected class to the clicked block
+                    block.classList.add('selected');
+
+                    // Update hidden input value
+                    hiddenModelInput.value = block.dataset.value;
+                });
             });
         });
     </script>
@@ -127,12 +179,14 @@
         <label for="volume">Trading Volume So Far Today</label>
         <input type="text" name="volume" required>
         <label for="model">Choose Your Model</label>
-        <select name="model" id="model">
-            <option value="LR">Linear Regression</option>
-            <option value="TR">Decision Tree</option>
-            <option value="KN">K-Nearest Neighbors</option>
-        </select>
+        <div class="option-container">
+            <div class="option-block selected" data-value="LR">Linear Regression</div>
+            <div class="option-block" data-value="TR">Decision Tree</div>
+            <div class="option-block" data-value="KN">K-Nearest Neighbors</div>
+          </div>
+          
         <p></p>
+        <input type="hidden" name="model" id="model"> <p></p>
         <input type="submit" value="Predict" class="hov">
     </form>
 </body>
