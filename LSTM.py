@@ -46,13 +46,15 @@ def LSTM_implement(df_Stock, your_data):
     for i in range(60, len(test_data)):
         x_test.append(test_data[i - 60:i, 0])
     x_test = np.array(x_test)
+    x_test = np.reshape(x_test, (x_test.shape[0],x_test.shape[1], 1))
 
     predictions = model.predict(x_test)
     predictions = scaler.inverse_transform(predictions)
     y_true = y_test
     y_pred = predictions
     explained_variance = r2_score(y_true, y_pred)
-    test_explain_variation = explained_variance * 100
+    # test_explain_variation = explained_variance * 100
+    accuracy = 1 - np.mean(np.abs((y_pred - y_true) / y_true))
 
     c = your_data['Open'] + your_data['High'] + your_data['Low']
     f = float('inf')
@@ -90,9 +92,9 @@ def LSTM_implement(df_Stock, your_data):
             x_test.append(test_data[i - int(closest_index / 2):i, 0])
         # convert the data to a numpy array
         x_test = np.array(x_test)
-        x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
+    x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
 
-        predictions = model.predict(x_test)
-        predictions = scaler.inverse_transform(predictions)
-        your_data_prediction = predictions[-1][0]
-    return test_explain_variation, your_data_prediction
+    predictions = model.predict(x_test)
+    predictions = scaler.inverse_transform(predictions)
+    your_data_prediction = predictions[-1][0]
+    return accuracy, your_data_prediction
