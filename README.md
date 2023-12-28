@@ -60,7 +60,8 @@ The value num is the value you chose for the port. If you havent filled it yet, 
 
 Then, the application should be shown up :
 
-![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/671dd719-f15c-4ddf-a7e6-418783559cb0)
+![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/53539fd7-1e97-407c-a7ca-4936b95aed55)
+
 
 7. Just fill the necessary attribute of the stock price, click 'Predict' and you will get the answer, with the performance of the algorithm on train set
 
