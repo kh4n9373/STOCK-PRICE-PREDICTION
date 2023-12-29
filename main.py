@@ -5,7 +5,6 @@ from crawling_data import fetch_stock_data
 from LinReg import Lr_implement
 from KNN import KNN_implement
 from Tree import Tree_implement
-
 import sys
 import time
 
