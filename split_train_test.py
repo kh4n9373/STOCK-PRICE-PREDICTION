@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 def create_train_test_test(df_Stock):
