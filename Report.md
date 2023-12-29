@@ -66,6 +66,26 @@ The learning process in machine learning has three main elements that are essent
 
 Long Short Term Memory (LSTM) - is a model that increases the memory of Recurrent Neural Networks (RNN). The core idea behind LSTM is the use of memory cells. These cells can store information for long durations, and their state can be selectively updated or cleared. To control the flow of information into and out of the memory cell, the algorithm uses three distinct gates: Input gate (manages the amount of new information that enters the memory cell), Forget gate (controls the removal of information from the memory cell) and Output gate (determines the information to be output based on the current cell state). About cell state, it is the internal memory of the LSTM which runs along the entire sequence and is modified by the gates at each time step. Ultimately, LSTM is trained using backpropagation through time (BPTT), similar to other RNNs with the aim to minimize the difference between the predicted output and the actual output.
 
+#### Specifically
+
+From Neural Networks to LSTM
+
+Neural Networks are artificial systems that were inspired by biological neural networks. These systems learn to perform tasks by being exposed to various datasets and examples without any task-specific rules. Neural networks consists of Nodes and Connections between the nodes. Nodes can be Input, Output or Activation Function while Connections include weights and biases (these weight and bias are created by a method called Backpropagation) which make change to the Activation Function. Ultimately, the algorithm finds a way to generate characteristics that fit with the data provided.
+
+![NN](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/132960690/b3e21dc9-8624-4450-a4cd-7d6b532d5df9)
+
+Recurrent Neural Network is a new variation of Neural Network invented to works better when data is sequential like Time-Series data and text data. In RNN, the output from the previous step is fed as input to the current step. The main and most important feature of RNN is its Hidden state, or Feedback Loop which remembers some information about a sequence. 
+
+![RNN](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/132960690/a6d749e3-6484-428d-980b-df249a78ac63)
+
+However, when it comes to deal with Time-series data, LSTM (a modified version of RNN) is more preferred since it can handle a problem that standard RNNs suffer from, i.e. the vanishing gradient problem. The problem often occurs when the current RNN is having too many feedback loops that the algorithm starts to give incorrect prediction. 
+
+![RNN1](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/132960690/4341d997-7ff5-4017-b87f-1c155a42cf09)
+
+To solve that, LSTM uses gated cell which consists of four layers that interact with one another in a way to produce the output of that cell along with the cell state. These two things are then passed onto the next hidden layer. Unlike RNNs which have got only a single neural net layer of tanh, LSTMs comprise three logistic sigmoid gates and one tanh layer. Gates have been introduced in order to limit the information that is passed through the cell. They determine which part of the information will be needed by the next cell and which part is to be discarded. Each operation, the algorithm decides the amount of information to be stored in the Cell state (Long-term memory) and also keeps track of the Short-term memory. Therefore, LSTM is suitable for predicting sequenced data, especially Stock price.
+
+![LSTM1](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/132960690/3818277c-f966-473c-a353-84fce5d3d264)
+
 #### Why We Use It
 
 In comparison with traditional RNNS, LSTM is a modified version to cope with the vanishing gradient problem, which is caused by the repeated use of the same parameters in RNN blocks, at each step. To do so, LSTM leverages gating mechanisms to control the flow of information and gradients. This helps prevent the vanishing gradient problem and allows the network to learn and retain information over longer sequences. As a result, LSTM is more effective at predicting time-series patterns, especially stock prices.

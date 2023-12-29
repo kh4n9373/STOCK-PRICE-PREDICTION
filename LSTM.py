@@ -62,13 +62,12 @@ def LSTM_implement(df_Stock, your_data):
         x_test.append(test_data[i - 60:i, :])
 
     x_test = np.array(x_test)
-    x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], x_test.shape[2]))
 
     predictions = model.predict(x_test)
-    predictions = scaler.inverse_transform(predictions.reshape(-1, 1))
-    y_true = y_test.reshape(-1, 1)
-    
-    explained_variance = r2_score(y_true, predictions)
+    predictions = scaler.inverse_transform(predictions)
+    y_true = y_test
+    y_pred = predictions
+    explained_variance = r2_score(y_true, y_pred)
     test_explain_variation = explained_variance * 100
 
     c = your_data['Open'] + your_data['High'] + your_data['Low']
@@ -106,18 +105,9 @@ def LSTM_implement(df_Stock, your_data):
             x_test.append(test_data[i - int(closest_index / 2):i, :])
 
         x_test = np.array(x_test)
-        x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], x_test.shape[2]))
+    x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
 
-    predictions = model.predict(x_test)
-    predictions = scaler.inverse_transform(predictions.reshape(-1, 1))
-    your_data_prediction = predictions[-1][0]
-
+        predictions = model.predict(x_test)
+        predictions = scaler.inverse_transform(predictions)
+        your_data_prediction = predictions[-1][0]
     return test_explain_variation, your_data_prediction
-
-# Example usage:
-stock = fetch_stock_data('AAPL', '10y')
-data = pd.DataFrame({'Open': [30], 'High': [50], 'Low': [20], 'Volume': [567890]})
-result = LSTM_implement(stock, data)
-test_explain_variation, your_data_prediction = result
-print("Test Explain Variation:", test_explain_variation)
-print("Your Data Prediction:", your_data_prediction)
