@@ -1,3 +1,4 @@
+# You can run our entire program using terminal on this file.
 import pandas as pd
 from read_the_data import read_the_data
 from crawling_data import fetch_stock_data
@@ -26,7 +27,8 @@ while True:
         print('\n')
         print('Finished !')
         break
-    print("Invalid business code. Please enter letters only.")
+    else:
+        print("Invalid business code. Please enter letters only.")
 
 print('\n')
 
@@ -55,15 +57,16 @@ model = input('\nChoose Your Models (LR), (TR), (KN): ').upper()
 time.sleep(3)
 print('\n')
 if model == 'LR':
-    final = Lr_implement(stock_data, data)
+    accu, final = Lr_implement(stock_data, data)
 elif model == 'TR':
-    final = Tree_implement(stock_data, data)
+    accu, final = Tree_implement(stock_data, data)
 elif model == 'KN':
-    final = KNN_implement(stock_data, data)
+    accu, final = KNN_implement(stock_data, data)
 else:
     print("Invalid input. Please choose LR, TR, or KN.")
 
 print('\n')
+print(f'Performance of {model}:', accu)
 print('Predicted close price :', final[0])
 print('\n----------------------------------------------')
 
