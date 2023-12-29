@@ -44,9 +44,9 @@ def predict():
         return "Invalid input. Please choose LR, TR, or KN."
 
     if final[0] < opun:
-        return render_template('result.html', model=model,accu=round(accu*100,3), predict='DOWN', final=round(final[0],4))
+        return render_template('result.html',accu=round(accu*100,3), predict='DOWN', final=round(final[0],4))
     elif final[0] > opun:
-        return render_template('result.html', model=model,accu=round(accu*100,3), predict='UP', final=round(final[0],4))
+        return render_template('result.html',accu=round(accu*100,3), predict='UP', final=round(final[0],4))
 
 if __name__ == '__main__':
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 5000

@@ -7,8 +7,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn import model_selection
-
-
+from sklearn.metrics import r2_score
 def KNN_implement(df_Stock, your_data):
     X = df_Stock.drop(columns=['Close'])
     Y = df_Stock['Close']
@@ -26,6 +25,9 @@ def KNN_implement(df_Stock, your_data):
     
     your_data_scaled = scaler.transform(your_data)
     res = knn_model.predict(your_data_scaled)
-    return results_kfold.mean(),res
+    y_pred = knn_model.predict(X_test_scaled)
+    accuracy = 1 - np.mean(np.abs((y_pred- Y_test) / Y_test))
+    return accuracy, res
+
 
 
