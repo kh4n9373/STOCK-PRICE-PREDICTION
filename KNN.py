@@ -7,20 +7,25 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn import model_selection
 from sklearn.metrics import r2_score
 def KNN_implement(df_Stock, your_data):
+    # Create feature and label, split train/test set
     X = df_Stock.drop(columns=['Close'])
     Y = df_Stock['Close']
     X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size=0.1,random_state=42)
 
+    # Scale the data
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
-    
+
+    # Implement model
     knn_regressor = KNeighborsRegressor(n_neighbors=5)
     knn_model = knn_regressor.fit(X_train_scaled, Y_train)
 
+    # Use k-fold cross-validation to evaluate
     knn_kfold = model_selection.KFold(n_splits=10, random_state=100, shuffle=True)
     results_kfold = model_selection.cross_val_score(knn_model, X_test_scaled, Y_test.astype(int), cv=knn_kfold)
-    
+
+    # Predict base on user data and test the accuracy
     your_data_scaled = scaler.transform(your_data)
     res = knn_model.predict(your_data_scaled)
     y_pred = knn_model.predict(X_test_scaled)
