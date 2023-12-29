@@ -180,6 +180,9 @@ In each notebook, we explain clearly the idea of every code snippet to implement
 
 ## Anyways,
    Thank you for reviewing !! 
+   
    Star the project if you appreciate our very first project :)
+   
    Although our program is not too good or even it may has a bunch of mistake or mis-understanding (we're just naive students, step-by-step learning and implementing it), this project was built through our collective efforts in research and wholehearted contributions. 
+   
    Your encouragement will be a tremendous motivation for us to undertake future projects !
