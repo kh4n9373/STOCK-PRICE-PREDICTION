@@ -1,8 +1,6 @@
-
 import pandas as pd
 import numpy as np
 from sklearn import model_selection
-# from split_train_test import create_train_test_test
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsRegressor
@@ -28,6 +26,3 @@ def KNN_implement(df_Stock, your_data):
     y_pred = knn_model.predict(X_test_scaled)
     accuracy = 1 - np.mean(np.abs((y_pred- Y_test) / Y_test))
     return accuracy, res
-
-
-
