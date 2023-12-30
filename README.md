@@ -78,7 +78,7 @@ The example of running the app successfully:
 ![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/699744f5-7792-4dc8-b245-bccb0d40a61e)
 
 
-6. Go up to your search engine (chrome, safari, bing,...) type this to the search bar :
+Go up to your search engine (chrome, safari, bing,...) type this to the search bar :
 
 ~~~
 localhost: #num
@@ -94,7 +94,7 @@ Then, the application should be shown up :
 ![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/53539fd7-1e97-407c-a7ca-4936b95aed55)
 
 
-7. Just fill in the necessary attribute of the stock price, click 'Predict' and you will get the answer, with the performance of the algorithm on train set
+Just fill in the necessary attribute of the stock price, click 'Predict' and you will get the answer, with the performance of the algorithm on train set
 
 ![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/b1defc02-5e8c-45a4-bab4-80d97e2a169b)
 
