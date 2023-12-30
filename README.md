@@ -150,6 +150,10 @@ In each notebook, we explain clearly the idea of every code snippet to implement
   We (each member individually) have incorporated our key points into the slides. During the presentation, we will rely on those script lines to articulate our thoughts. Script synthesis is aimed at making the slide creation (handled by one member) more cohesive, instead of having multiple people working on slides simultaneously.
 
 
+**TEMPLATES** :
+  The html, css and javascript lines we created for the web UI of the program.The index.html is the input web page, the result.html is the output web page on which we display the prediction.
+
+
 ## The architecture of stock price prediction program
 ![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/7afc522f-1ef6-4c33-87b9-9198baf0d656)
 
