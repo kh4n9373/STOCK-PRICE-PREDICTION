@@ -15,7 +15,7 @@ Contributors:
 - Ha Vu Ngoc
 - Kien Dinh Van
 
-This repository was created from November 25 2023 to serve the capstone project or the cource Introduction to Artificial Intelligent in HUST. 
+This repository was created from November 25 2023 to serve the capstone project of the course Introduction to Artificial Intelligent in HUST. 
 
 # How to install and use the Stock Price Predict app ?
 
@@ -71,7 +71,7 @@ First you need to run the python file main_webui.py
 ~~~
 python main_webui.py #num
 ~~~
-#num is the value of the port number you prefer ranging from 0000 to 9999, you should based on this value to run the app on the website. If you dont fill in the 'num',the executor will set the num=5000 by default.
+#num is the value of the port number you prefer (0000 to 9999 is better), you should based on this value to run the app on the website. If you dont fill in the 'num',the executor will set the num=5000 by default.
 
 The example of running the app successfully:
 
@@ -163,9 +163,9 @@ In each notebook, we explain clearly the idea of every code snippet to implement
 
    **Model Selection**:You can choose between three different machine learning models for prediction: Linear Regression (LR), Decision Tree (TR), and K-Nearest Neighbors (KN). Each model has its own strengths and weaknesses, and the choice may depend on the specific characteristics of the chosen stock and historical data. Based on your selection, the app uses the chosen model to analyze the selected data attributes and build a predictive model.
 
-   **Prediction**:The model then uses the learned patterns from the historical data to predict th**e closing price of the stock for the current day (or a future date, depending on the app's functionality).
+   **Prediction**:The model then uses the learned patterns from the historical data to predict the closing price of the stock for the current day.
 
-   **Output**: The predicted closing price is displayed on the interface, potentially alongside other relevant information like confidence scores or historical price charts.
+   **Output**: The predicted closing price is displayed on the interface.
 
    **Overall Workflow:** The app essentially follows a common machine learning workflow for price prediction:
 
@@ -173,7 +173,7 @@ In each notebook, we explain clearly the idea of every code snippet to implement
    - Prepare and clean the data for analysis.
    - Choose and train a machine learning model	based on the selected data.
    - Use the trained model to predict future	outcomes (stock price in this case).
-   - Display the prediction and potentially	additional insights.
+   - Display the prediction.
 
 ## Limitations and Considerations
    It's important to keep in mind that stock price prediction is a complex task, and no model can guarantee perfect accuracy. Various factors beyond the scope of the provided data, like news events, economic conditions, and investor sentiment, can also influence stock prices. Therefore, it's crucial to treat predictions as estimations and use them alongside other analysis and considerations before making investment decisions.
