@@ -1,5 +1,5 @@
 ## Hanoi University of Science and Technology 
-### Vien cong nghe thong tin va truyen thong
+### School of Information and Communications Technology
 
 
 ![image](https://github.com/ktuanPT373/STOCK-PRICE-PREDICTION/assets/112315454/44d8d8e1-bbb2-42b3-93c4-96d80a86dc52)
